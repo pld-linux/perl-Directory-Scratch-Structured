@@ -6,14 +6,14 @@
 %define	pdir	Directory
 %define	pnam	Scratch-Structured
 Summary:	Directory::Scratch::Structured - creates temporary files and directories from a structured description
-#Summary(pl):	
+#Summary(pl):
 Name:		perl-Directory-Scratch-Structured
 Version:	0.03
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-modules/Directory/Directory-Scratch-Structured-0.03.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Directory/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f42c759eb3a8e2d9eb6e07379c25655a
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -39,12 +39,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module adds a create_structured_tree subroutine to the Directory::Scratch.
+This module adds a create_structured_tree subroutine to the
+Directory::Scratch.
 
 
 
-# %description -l pl
-# TODO
+# %description -l pl # TODO
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

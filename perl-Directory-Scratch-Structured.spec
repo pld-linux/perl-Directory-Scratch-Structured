@@ -6,7 +6,7 @@
 %define	pdir	Directory
 %define	pnam	Scratch-Structured
 Summary:	Directory::Scratch::Structured - creates temporary files and directories from a structured description
-#Summary(pl):
+Summary(pl.UTF-8):	Directory::Scratch::Structured - tworzenie plików i katalogów tymczasowych z opisu strukturalnego
 Name:		perl-Directory-Scratch-Structured
 Version:	0.03
 Release:	1
@@ -15,25 +15,26 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Directory/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f42c759eb3a8e2d9eb6e07379c25655a
+URL:		http://search.cpan.org/dist/Directory-Scratch-Structured/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(Data::TreeDumper)
-BuildRequires:	perl(Directory::Scratch)
-BuildRequires:	perl(Readonly)
-BuildRequires:	perl(Sub::Exporter)
-BuildRequires:	perl(Sub::Install)
-BuildRequires:	perl(Test::Block)
-BuildRequires:	perl(Test::Dependencies)
-BuildRequires:	perl(Test::Distribution)
-BuildRequires:	perl(Test::Exception)
-BuildRequires:	perl(Test::NoWarnings)
-BuildRequires:	perl(Test::Perl::Critic)
-BuildRequires:	perl(Test::Pod)
-BuildRequires:	perl(Test::Pod::Coverage)
-BuildRequires:	perl(Test::Spelling)
-BuildRequires:	perl(Test::Strict)
-BuildRequires:	perl(Test::Warn)
+BuildRequires:	perl-Data-TreeDumper
+BuildRequires:	perl-Directory-Scratch
+BuildRequires:	perl-Readonly
+BuildRequires:	perl-Sub-Exporter
+BuildRequires:	perl-Sub-Install
+BuildRequires:	perl-Test-Block
+BuildRequires:	perl-Test-Dependencies
+BuildRequires:	perl-Test-Distribution
+BuildRequires:	perl-Test-Exception
+BuildRequires:	perl-Test-NoWarnings
+BuildRequires:	perl-Test-Perl-Critic
+BuildRequires:	perl-Test-Pod
+BuildRequires:	perl-Test-Pod-Coverage
+BuildRequires:	perl-Test-Spelling
+BuildRequires:	perl-Test-Strict
+BuildRequires:	perl-Test-Warn
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,9 +43,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module adds a create_structured_tree subroutine to the
 Directory::Scratch.
 
-
-
-# %description -l pl # TODO
+%description -l pl.UTF-8
+Ten moduł dodaje procedurę create_structured_tree do
+Directory::Scratch.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -69,5 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Directory/Scratch/*.pm
-#%%{perl_vendorlib}/Directory/Scratch/Structured
 %{_mandir}/man3/*

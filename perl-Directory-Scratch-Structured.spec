@@ -9,7 +9,7 @@ Summary:	Directory::Scratch::Structured - creates temporary files and directorie
 Summary(pl.UTF-8):	Directory::Scratch::Structured - tworzenie plików i katalogów tymczasowych z opisu strukturalnego
 Name:		perl-Directory-Scratch-Structured
 Version:	0.04
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Directory/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -68,5 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/Directory/Scratch
 %{perl_vendorlib}/Directory/Scratch/*.pm
 %{_mandir}/man3/*

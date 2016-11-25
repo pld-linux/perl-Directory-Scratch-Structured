@@ -24,14 +24,8 @@ BuildRequires:	perl-Readonly
 BuildRequires:	perl-Sub-Exporter
 BuildRequires:	perl-Sub-Install
 BuildRequires:	perl-Test-Block
-BuildRequires:	perl-Test-Dependencies
-BuildRequires:	perl-Test-Distribution
 BuildRequires:	perl-Test-Exception
 BuildRequires:	perl-Test-NoWarnings
-BuildRequires:	perl-Test-Perl-Critic
-BuildRequires:	perl-Test-Pod
-BuildRequires:	perl-Test-Pod-Coverage
-BuildRequires:	perl-Test-Spelling
 BuildRequires:	perl-Test-Strict
 BuildRequires:	perl-Test-Warn
 %endif
@@ -69,5 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %dir %{perl_vendorlib}/Directory/Scratch
-%{perl_vendorlib}/Directory/Scratch/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/Directory/Scratch/Structured.pm
+%{_mandir}/man3/Directory::Scratch::Structured.3pm*

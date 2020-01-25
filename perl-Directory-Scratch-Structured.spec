@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Directory
 %define	pnam	Scratch-Structured
 Summary:	Directory::Scratch::Structured - creates temporary files and directories from a structured description
